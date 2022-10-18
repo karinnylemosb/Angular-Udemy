@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 // OnInit: ciclo de vida do angular.
 
 @Component({
@@ -6,13 +6,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent implements OnInit, OnChanges {
 
-  public title:string = "Kaka";
+  @Input() public title:string = "Bem vindo!";
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  ngOnChanges(): void {
+    alert("Fui alterado com sucesso!!");
+
   }
-
 }
+
+
+// o ngOnChanges só é invocado quando vem dados de fora.
