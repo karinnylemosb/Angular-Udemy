@@ -5,6 +5,7 @@ import { AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, 
   selector: 'app-root', //onde é feito a inicialização do app
   template: `
   <app-data-biding></app-data-biding>
+  <app-diretivas-estruturais><app-diretivas-estruturais>
   <router-outlet></router-outlet>
   `
 
