@@ -7,3 +7,10 @@
   <button (click)="getDados(i)"> Enviar dados </button>
 
 </p>
+
+
+
+
+//O que foi feito? Ao clicar no botão foi emitido um dado da lista. QUando criamos o Output ele cria um evento por fora, ele ocorre sempre que tiver um evento emitido, no caso (clicou no botão). Quando O evento enviardDdos (criado no app.component externo) foi ativado, capturou o evento(que pega o setDados) e pega os dados (getDados) e expõe.
+
+//Componente debaixo emitiu o evento, o pai capturou e faz uma ação;

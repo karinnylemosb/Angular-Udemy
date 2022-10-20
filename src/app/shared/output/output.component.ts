@@ -9,7 +9,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class OutputComponent implements OnInit {
 
  @Output() public enviarDados = new EventEmitter(); //Ele emite que algum dado foi enviado;
-  public list: Array < {nome: string, idade:number}> =[
+
+
+ public list: Array < {nome: string, idade:number}> =[
     {nome: "Karinny" , idade: 26},
     {nome: "Mari" , idade: 16},
     {nome: "Clarice" , idade: 26},
