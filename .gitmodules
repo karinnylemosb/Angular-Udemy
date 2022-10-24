@@ -1,0 +1,3 @@
+[submodule "CursoAngularIntroducao"]
+	path = CursoAngularIntroducao
+	url = https://github.com/karinnylemosb/IntroducaoAngular.git
