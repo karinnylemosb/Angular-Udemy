@@ -1,0 +1,27 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+
+  <label>
+    Nome:
+    <input type="text" formControlName="firstName">
+    <span *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.touched)|| (cadastroForm.get('firstName')?.dirty)">
+      Favor adicione seu nome!!!
+    </span>
+
+  </label>
+  <br>
+  <br>
+  <label>
+    Sobrenome:
+    <input type="text" formControlName="lastName">
+  </label>
+  <p>
+    <!-- {{cadastroForm.get('firstName')?.value}} -->
+    {{cadastroForm.get('firstName')?.errors | json }}
+    <!-- tocar no formulário -->
+    {{cadastroForm.get('firstName')?.touched | json }}
+    {{cadastroForm.get('firstName')?.dirty | json }}
+  </p>
+  <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>
+
+<!-- formGroup acessa a o grupo de formulários criado lá no TS. -->
