@@ -12,14 +12,16 @@
   <br>
   <label>
     Sobrenome:
-    <input type="text" formControlName="lastName">
+    <input type="text" formControlName="lastName" maxlength="5">
   </label>
   <p>
     <!-- {{cadastroForm.get('firstName')?.value}} -->
-    {{cadastroForm.get('firstName')?.errors | json }}
-    <!-- tocar no formulário -->
+    <!-- {{cadastroForm.get('firstName')?.errors | json }}
     {{cadastroForm.get('firstName')?.touched | json }}
-    {{cadastroForm.get('firstName')?.dirty | json }}
+    {{cadastroForm.get('firstName')?.dirty | json }} -->
+
+    {{cadastroForm.get('lastName')?.errors | json}}
+
   </p>
   <button [disabled]="cadastroForm.invalid">Enviar</button>
 </form>
